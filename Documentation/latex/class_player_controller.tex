@@ -1,0 +1,158 @@
+\hypertarget{class_player_controller}{}\section{Player\+Controller Class Reference}
+\label{class_player_controller}\index{Player\+Controller@{Player\+Controller}}
+
+
+Controlador del Game\+Object Player.  
+
+
+Inheritance diagram for Player\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_player_controller_a0928605583f0563cd84fe43119d336ec}{speed}
+\begin{DoxyCompactList}\small\item\em Multiplicador de velocidad de la esfera. \end{DoxyCompactList}\item 
+Text \hyperlink{class_player_controller_a61795bee5f0ca4705f688419919e3086}{count\+Text}
+\begin{DoxyCompactList}\small\item\em Game\+Object de texto que indica la puntuación. \end{DoxyCompactList}\item 
+Text \hyperlink{class_player_controller_a366f431ae274e7b19365f7b15b1709b8}{win\+Text}
+\begin{DoxyCompactList}\small\item\em Game\+Object de texto que felicita al jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_player_controller_ae1117d9c4da3193181cddad2c814e467}{Start} ()
+\begin{DoxyCompactList}\small\item\em Metodo que es llamado nada mas inicar el juego. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4}{Fixed\+Update} ()
+\begin{DoxyCompactList}\small\item\em Metodo Update() especifico para el Rigidbody. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_controller_a2a0510e318c75ef04e45b4ece3bd31cd}{On\+Trigger\+Enter} (Collider other)
+\begin{DoxyCompactList}\small\item\em Metodo que es llamado cada vez que el jugador interactua (colisiona con la hitbox) de otro Game\+Object que tenga algun componente de tipo Collider. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_controller_ad55b05bf5e6a5ae39a2a01700f1772ce}{Set\+Count\+Text} ()
+\begin{DoxyCompactList}\small\item\em Metodo que actualiza la puntuacion que mostramos en pantalla con la puntuacion actual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Rigidbody \hyperlink{class_player_controller_a93b9fa76e5456725594e87dd40f93611}{rb}
+\begin{DoxyCompactList}\small\item\em Componente del Game\+Object para manejas las fisicas. \end{DoxyCompactList}\item 
+int \hyperlink{class_player_controller_ac44590ddcba0af5af97eb025a56f9ae5}{count}
+\begin{DoxyCompactList}\small\item\em La puntuacion actual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controlador del Game\+Object Player. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4}{}\index{Player\+Controller@{Player\+Controller}!Fixed\+Update@{Fixed\+Update}}
+\index{Fixed\+Update@{Fixed\+Update}!Player\+Controller@{Player\+Controller}}
+\subsubsection[{Fixed\+Update}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+Controller.\+Fixed\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4}
+
+
+Metodo Update() especifico para el Rigidbody. 
+
+Asignamos el valor del control Izquierda/\+Derecha.
+
+Asignamos el valor del control Arriba/\+Abajo.
+
+Aplicamos una fuerza a la direccion de los controles segun el valor de speed. \hypertarget{class_player_controller_a2a0510e318c75ef04e45b4ece3bd31cd}{}\index{Player\+Controller@{Player\+Controller}!On\+Trigger\+Enter@{On\+Trigger\+Enter}}
+\index{On\+Trigger\+Enter@{On\+Trigger\+Enter}!Player\+Controller@{Player\+Controller}}
+\subsubsection[{On\+Trigger\+Enter}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+Controller.\+On\+Trigger\+Enter (
+\begin{DoxyParamCaption}
+\item[{Collider}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_player_controller_a2a0510e318c75ef04e45b4ece3bd31cd}
+
+
+Metodo que es llamado cada vez que el jugador interactua (colisiona con la hitbox) de otro Game\+Object que tenga algun componente de tipo Collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & El componente Collider del Gameobject con el que colisiona.\\
+\hline
+\end{DoxyParams}
+Comprobamos que el Game\+Object con el que colisiona tenga la tag \char`\"{}\+Pick\+Up\char`\"{}.
+
+Deshabilitamos el Game\+O\+Bject.
+
+Ganamos un punto.
+
+Actualizamos la puntuacion en pantalla. \hypertarget{class_player_controller_ad55b05bf5e6a5ae39a2a01700f1772ce}{}\index{Player\+Controller@{Player\+Controller}!Set\+Count\+Text@{Set\+Count\+Text}}
+\index{Set\+Count\+Text@{Set\+Count\+Text}!Player\+Controller@{Player\+Controller}}
+\subsubsection[{Set\+Count\+Text}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+Controller.\+Set\+Count\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_player_controller_ad55b05bf5e6a5ae39a2a01700f1772ce}
+
+
+Metodo que actualiza la puntuacion que mostramos en pantalla con la puntuacion actual. 
+
+Actualizamos el Game\+Object count\+Text con la puntuacion actual.
+
+Y si la puntuacion actual es de 6 (Puntuacion maxima).
+
+Felicitamos al jugador con un Game Over. \hypertarget{class_player_controller_ae1117d9c4da3193181cddad2c814e467}{}\index{Player\+Controller@{Player\+Controller}!Start@{Start}}
+\index{Start@{Start}!Player\+Controller@{Player\+Controller}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+Controller.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_player_controller_ae1117d9c4da3193181cddad2c814e467}
+
+
+Metodo que es llamado nada mas inicar el juego. 
+
+Asignamos el componente Rigidbody del Game\+Object.
+
+Ponemos el contador a cero.
+
+Ponemos la puntuacion en pantalla. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_player_controller_ac44590ddcba0af5af97eb025a56f9ae5}{}\index{Player\+Controller@{Player\+Controller}!count@{count}}
+\index{count@{count}!Player\+Controller@{Player\+Controller}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}int Player\+Controller.\+count\hspace{0.3cm}{\ttfamily [private]}}\label{class_player_controller_ac44590ddcba0af5af97eb025a56f9ae5}
+
+
+La puntuacion actual. 
+
+\hypertarget{class_player_controller_a61795bee5f0ca4705f688419919e3086}{}\index{Player\+Controller@{Player\+Controller}!count\+Text@{count\+Text}}
+\index{count\+Text@{count\+Text}!Player\+Controller@{Player\+Controller}}
+\subsubsection[{count\+Text}]{\setlength{\rightskip}{0pt plus 5cm}Text Player\+Controller.\+count\+Text}\label{class_player_controller_a61795bee5f0ca4705f688419919e3086}
+
+
+Game\+Object de texto que indica la puntuación. 
+
+\hypertarget{class_player_controller_a93b9fa76e5456725594e87dd40f93611}{}\index{Player\+Controller@{Player\+Controller}!rb@{rb}}
+\index{rb@{rb}!Player\+Controller@{Player\+Controller}}
+\subsubsection[{rb}]{\setlength{\rightskip}{0pt plus 5cm}Rigidbody Player\+Controller.\+rb\hspace{0.3cm}{\ttfamily [private]}}\label{class_player_controller_a93b9fa76e5456725594e87dd40f93611}
+
+
+Componente del Game\+Object para manejas las fisicas. 
+
+\hypertarget{class_player_controller_a0928605583f0563cd84fe43119d336ec}{}\index{Player\+Controller@{Player\+Controller}!speed@{speed}}
+\index{speed@{speed}!Player\+Controller@{Player\+Controller}}
+\subsubsection[{speed}]{\setlength{\rightskip}{0pt plus 5cm}float Player\+Controller.\+speed}\label{class_player_controller_a0928605583f0563cd84fe43119d336ec}
+
+
+Multiplicador de velocidad de la esfera. 
+
+\hypertarget{class_player_controller_a366f431ae274e7b19365f7b15b1709b8}{}\index{Player\+Controller@{Player\+Controller}!win\+Text@{win\+Text}}
+\index{win\+Text@{win\+Text}!Player\+Controller@{Player\+Controller}}
+\subsubsection[{win\+Text}]{\setlength{\rightskip}{0pt plus 5cm}Text Player\+Controller.\+win\+Text}\label{class_player_controller_a366f431ae274e7b19365f7b15b1709b8}
+
+
+Game\+Object de texto que felicita al jugador. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\hyperlink{_player_controller_8cs}{Player\+Controller.\+cs}\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{class_camera_controller}{}\section{Camera\+Controller Class Reference}
+\label{class_camera_controller}\index{Camera\+Controller@{Camera\+Controller}}
+
+
+Controlador del Game\+Object Main Camera  
+
+
+Inheritance diagram for Camera\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_camera_controller}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \hyperlink{class_camera_controller_aae794ec2d17947f671ce0eaef9aac8b7}{player}
+\begin{DoxyCompactList}\small\item\em Game\+Object Player al que vamos a tomar como referencia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_camera_controller_ad4a238c6f7db3ee003302a245d860860}{Start} ()
+\begin{DoxyCompactList}\small\item\em Metodo que es llamado nada mas iniciar el juego. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_controller_afcd241727886518c21b9609193e32d18}{Late\+Update} ()
+\begin{DoxyCompactList}\small\item\em Metodo llamado despues de actualizar los datos en cada frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \hyperlink{class_camera_controller_aff80d2275dae360196361c39078bfda4}{offset}
+\begin{DoxyCompactList}\small\item\em Desfase de la posicion del Game\+Object a la de Player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controlador del Game\+Object Main Camera 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_camera_controller_afcd241727886518c21b9609193e32d18}{}\index{Camera\+Controller@{Camera\+Controller}!Late\+Update@{Late\+Update}}
+\index{Late\+Update@{Late\+Update}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{Late\+Update}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+Controller.\+Late\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_camera_controller_afcd241727886518c21b9609193e32d18}
+
+
+Metodo llamado despues de actualizar los datos en cada frame. 
+
+El frame ha refrescado la posicion del jugador. Ahora con esta nueva posicion vamos a situar la camara en su posicion equivalente segun el desfase calculado. \hypertarget{class_camera_controller_ad4a238c6f7db3ee003302a245d860860}{}\index{Camera\+Controller@{Camera\+Controller}!Start@{Start}}
+\index{Start@{Start}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{Start}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+Controller.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_camera_controller_ad4a238c6f7db3ee003302a245d860860}
+
+
+Metodo que es llamado nada mas iniciar el juego. 
+
+Restamos a la posicion de la camara la del jugador. 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_camera_controller_aff80d2275dae360196361c39078bfda4}{}\index{Camera\+Controller@{Camera\+Controller}!offset@{offset}}
+\index{offset@{offset}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{offset}]{\setlength{\rightskip}{0pt plus 5cm}Vector3 Camera\+Controller.\+offset\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_controller_aff80d2275dae360196361c39078bfda4}
+
+
+Desfase de la posicion del Game\+Object a la de Player. 
+
+\hypertarget{class_camera_controller_aae794ec2d17947f671ce0eaef9aac8b7}{}\index{Camera\+Controller@{Camera\+Controller}!player@{player}}
+\index{player@{player}!Camera\+Controller@{Camera\+Controller}}
+\subsubsection[{player}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object Camera\+Controller.\+player}\label{class_camera_controller_aae794ec2d17947f671ce0eaef9aac8b7}
+
+
+Game\+Object Player al que vamos a tomar como referencia. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\hyperlink{_camera_controller_8cs}{Camera\+Controller.\+cs}\end{DoxyCompactItemize}
